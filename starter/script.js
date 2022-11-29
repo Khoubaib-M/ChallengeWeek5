@@ -151,7 +151,7 @@ function generatePassword() {
   var password = getRandom(getPasswordOptionsOutput);
   console.log("testing...", getPasswordOptionsOutput);
 
-  var finalPass = ""
+  var finalPass = "";
 
   password.forEach(l => { finalPassword += l; });
   console.log(finalPassword);
