@@ -115,9 +115,34 @@ var criteria = [
     characters: numericCharacters
   }
 ]
+
+criteria.forEach(items => {
+  console.log(items.userChoice);
+  if (items.userChoice === true) {
+    arr.push(items.characters);
+  }
+});
+
+console.log(arr);
+var output = [arr, userInput];
+return output;
+
+
 // Function for getting a random element from an array
 function getRandom(arr) {
+  var emptyArray = [];
 
+  for (var i = emptyArray.length; i < arr[1]; i++) {
+    var indexRandom = Math.floor(Math.random(arr[0].length) * arr[0].length);
+    console.log('Random choice of index: ', indexRandom);
+    var randomArray = Math.floor(Math.random(arr[0][indexRandom].length) * arr[0][indexRandom].length);
+    console.log(randomArray);
+    var char = arr[0][indexRandom][randomArray];
+    emptyArray.push(char);
+  }
+
+  console.log(emptyArray);
+  return emptyArray;
 }
 
 // Function to generate password with user input
